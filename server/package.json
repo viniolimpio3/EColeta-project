@@ -4,13 +4,18 @@
   "description": "Nodejs api rest NLW",
   "main": "index.js",
   "scripts": {
-    "server__": "npx ts-node src/server.ts",
-    "server":"npx ts-node-dev src/server.ts"
+    "server__": "ts-node src/server.ts",
+    "server": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
+    "knex:seed": "knex --knexfile knexfile.ts seed:run "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/cors": "^2.8.6",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "mysql": "^2.18.1",
     "typescript": "^3.9.3"
   },
   "devDependencies": {
