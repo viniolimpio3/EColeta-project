@@ -158,7 +158,8 @@ const CreatePoint = ()=>{
         .then(response =>{
             const cidade = response.data.map( city =>{
                 return city
-            });
+            }); 
+            
             setCities(cidade);
             
         });
